@@ -1,0 +1,199 @@
+<html>
+  <head>
+    <!--- External Scripts and stylesheets --->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+                crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Abel|Gloria+Hallelujah" rel="stylesheet">
+    <!--- End of External Scripts and stylesheets --->
+
+    <style>
+      h1 {
+        margin-top: 80px;
+        margin-bottom: 50px;
+        text-align: center;
+        font-Size: 60px;
+        font-family: 'Gloria Hallelujah', cursive;
+        color: #6EEFBE;
+      }
+
+      p {
+        font-family: 'Abel', sans-serif;
+        font-size: 30px;
+      }
+      #content {
+        color: #ADE9FF;
+        width: 100%;
+        padding: 0px;
+        background-color: rgb(41,41,41);
+        padding: 0px 40px 80px 0px;
+      }
+      #schoolsAndDegrees {
+        font-size: 16px;
+        overflow: hidden;
+        display: block;
+        width: 300px;
+        height: 35px;
+        margin-left: 50px;
+      }
+
+      #skillsPic {
+        width: 300px;
+        height: 150px;
+        margin: 30px;
+      }
+
+    </style>
+  </head>
+  <body >
+    <div id="Head" >
+    </div>
+    <div class="container" id="content" >
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+          <div id="intro" style="margin-bottom: 80px;">
+            <h1>
+              Hello World!
+            </h1>
+            <p>
+              I am a programming hobbyist. Currently I am pursiuing a degree in Computer Science from Queens College.
+              From User Interface Design to Algorithms, I am eager to learn. I have been learned to code on my own since
+              9th grade! Armed with Javascript technologies such as React, Node and Angular, I am ready to tackle any website!
+            </p>
+          </div>
+        </div>
+
+        <div id="education" class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+          <h1 style="text-align: left;"> Academics </h1>
+          <label id="schoolsAndDegrees" style="">
+            <span style="font-size: 24px;"> Schools and Degrees </span>
+            <a style="float: right; background-color: rgb(41,41,41); border: none;"  onclick="toggleSchoolsandDegrees()">
+              <span id="expansion" style="margin-top: 8px;" class="glyphicon glyphicon-menu-down"></span>
+            </a>
+            <br><br>
+            <div style="margin-left: 10px;">
+              John Bowne High School From 20xx - 20xx General High School Diploma <br><br>
+              Queens College - From 20xx - Present Pursing Bachelour of Scheice in Computer Scienec
+            </div>
+          </label>
+          <p>
+            Okay. You got me. Nothing impressive to show. As a matter of fact, barely passed high school and I am struggling to motivate myself to
+            stay in college. I am not a fan of classroom structured teaching. Memorizing strict procedures to solving a problem in an exam does not help my
+            problem solving methodology. I see failing as a key to success. So when I fail an exam, I am not thinking of whether I am going to fail the class
+            or not but of the questions I got wrong and why I got them wrong.
+          </p>
+
+        </div>
+
+        <div id="skills" class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+          <h1 style="text-align: right;"> Skills and Technologies </h1>
+          <img src="web.png" id="skillsPic">
+          <img src="react.png" id="skillsPic">
+          <img src="node.png" id="skillsPic">
+          <img src="express.png" id="skillsPic"> <br>
+          <img src="linux.png" id="skillsPic">
+          <img src="cpp.png" id="skillsPic">
+          <img src="java.png" id="skillsPic">
+          <img src="mysql.png" >
+        </div>
+    </div>
+    <script>
+      var toggled = false;
+      function toggleSchoolsandDegrees(e){
+        if (toggled)
+        {
+          height = '35px';
+          width = '400px';
+          document.getElementById('expansion').className = 'glyphicon glyphicon-menu-down';
+        }
+        else
+        {
+          height = '150px';
+          width = '700px';
+          document.getElementById('expansion').className = 'glyphicon glyphicon-menu-left';
+        }
+        $('#schoolsAndDegrees').animate({
+          height: height,
+          width: width,
+        });
+        toggled = !toggled;
+      }
+    </script>
+    <script type="text/babel">
+      class NavLink extends React.Component {
+        constructor(props) {
+          super(props);
+          this.linkStyle = {
+            color: 'black',
+            fontSize: '25px',
+            marginTop: '5px',
+            borderRadius: '15px 15px 15px 15px',
+            fontFamily: "'Abel', sans-serif",
+          };
+        }
+        hoverIn(e) {
+          const style = e.target.style;
+          style.backgroundColor = 'rgb(41,41,41)';
+          style.color = '#6EEFBE';
+        }
+        hoverOut(e) {
+          const style = e.target.style;
+          style.backgroundColor = '#6EEFBE';
+          style.color = 'black';
+        }
+        render() {
+          return (<a className={this.props.navc} style={this.linkStyle} href={this.props.link} onMouseEnter={this.hoverIn} onMouseLeave={this.hoverOut}>
+                    {this.props.text}
+                    <span className={this.props.glyph} style={{marginLeft: '5px'}} />
+                  </a>)
+        }
+      }
+      NavLink.defaultProps = {
+        navc: '',
+      }
+      class Nav extends React.Component {
+        constructor(props) {
+          super(props);
+          this.navStyle = {
+            backgroundColor: '#6EEFBE',
+            height: '60px',
+            margin: '0px',
+          }
+        }
+        render() {
+          return (
+            <nav className="navbar navbar-inverse" style={this.navStyle}>
+              <div className="container-fluid">
+                <div className="navbar-header">
+                  <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                  </button>
+                  <NavLink navc="navbar-brand" link="#" text="Muhammad Bilal" />
+                </div>
+                <div className="collapse navbar-collapse" id="myNavbar">
+                  <ul className="nav navbar-nav navbar-right">
+                    <li><NavLink link="#" text="About" /></li>
+                    <li><NavLink link="#" text="Education" /></li>
+                    <li><NavLink link="#" text="Experience" /></li>
+                    <li><NavLink link="#" text="Skills" /></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          )
+        }
+      }
+      ReactDOM.render(<Nav />, document.getElementById('Head'));
+    </script>
+  </body>
+</html>

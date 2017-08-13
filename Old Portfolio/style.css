@@ -1,0 +1,134 @@
+p {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 20px;
+    text-align: justify;
+}
+
+h1,h2,h3 {
+    font-family: 'Architects Daughter', cursive;
+}
+#header {
+    background-color: #0000ff;
+    color: white;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+    position: fixed;
+    z-index: 5;
+    margin-bottom:15px;
+    text-align: right;
+}
+#header>ul>li {
+    margin-left: 15px;
+    margin-right: 15px;
+    display: inline;
+}
+#intro {
+    color:white;
+    overflow: hidden;
+    text-align: center;
+
+}
+#background-port {
+    background-image: url("alby.png");
+    border: 1px solid black;
+    height: 500px;
+    max-width: 432px;
+    min-width: 432px;
+    margin-bottom: 15px;
+
+}
+
+#education {
+    background: white; color: black;
+}
+
+#work-exp {
+    color: white;
+}
+
+#exp {
+    background: white;
+    color: black;
+}
+
+#projZ {
+  color: white;
+}
+
+#projZ * {
+  margin: 15px;
+}
+
+#contact {
+
+    text-align: center;
+    color: white;
+
+    line-height: 0px;
+=======
+p {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 20px;
+    text-align: justify;
+}
+a {
+
+}
+h1,h2,h3 {
+    font-family: 'Architects Daughter', cursive;
+}
+#header {
+    background-color: #0000ff;
+    color: white;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+    position: fixed;
+    z-index: 5;
+    margin-bottom:15px;
+    text-align: right;
+}
+#header>ul>li {
+    margin-left: 15px;
+    margin-right: 15px;
+    display: inline;
+}
+#intro {
+    color:white;
+    overflow: hidden;
+    text-align: center;
+
+}
+#background-port {
+    background-image: url("alby.png");
+    border: 1px solid black;
+    height: 500px;
+    max-width: 432px;
+    min-width: 432px;
+    margin-bottom: 15px;
+
+}
+
+#education {
+    background: white; color: black;
+}
+
+#work-exp {
+    color: white;
+}
+
+#exp {
+    background: white; color: black;
+}
+
+#contact {
+
+    text-align: center;
+    color: white;
+
+    line-height: 0px;
+>>>>>>> 8aaec287fe747d702985e3faefdde355293793d1
+}
