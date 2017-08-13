@@ -30,6 +30,7 @@
         font-size: 30px;
       }
       #content {
+        position: relative;
         color: #ADE9FF;
         width: 100%;
         padding: 0px;
@@ -54,7 +55,7 @@
     </style>
   </head>
   <body >
-    <div id="Head" >
+    <div id="Head" style="">
     </div>
     <div class="container" id="content" >
       <div class="row">
@@ -150,7 +151,18 @@
           style.color = 'black';
         }
         render() {
-          return (<a className={this.props.navc} style={this.linkStyle} href={this.props.link} onMouseEnter={this.hoverIn} onMouseLeave={this.hoverOut}>
+          var hoverIn;
+          var hoverOut;
+          if (this.props.disableHighLight)
+          {
+            hoverIn = hoverOut = '';
+          }
+          else
+          {
+            hoverIn = this.hoverIn;
+            hoverOut = this.hoverOut
+          }
+          return (<a className={this.props.navc} style={this.linkStyle} href={this.props.link} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>
                     {this.props.text}
                     <span className={this.props.glyph} style={{marginLeft: '5px'}} />
                   </a>)
@@ -164,17 +176,18 @@
           super(props);
           this.navStyle = {
             backgroundColor: '#6EEFBE',
-            height: '60px',
-            margin: '0px',
+              margin: '0px',
           }
+
         }
+
         render() {
           return (
-            <nav className="navbar navbar-inverse" style={this.navStyle}>
+            <nav className="navbar navbar-toggleable-md navbar-light bg-faded" style={this.navStyle}>
               <div className="container-fluid">
                 <div className="navbar-header">
-                  <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span className="icon-bar"></span>
+                  <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"  >
+                    <NavLink glyph="glyphicon glyphicon-chevron-down"  disableHighLight={true} />
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>
                   </button>
