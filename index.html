@@ -43,15 +43,47 @@
         padding: 0px 40px 80px 0px;
       }
 
-      #skillsPic {
+      .skillsPic {
         width: 150px;
         height: 75px;
         margin: 30px;
       }
 
+      #brandLink {
+        color: black;
+        font-size: 25px;
+        padding: 10px;
+        margin-right: 10px;
+        border-radius: 15px 15px 15px 15px;
+        font-family: 'Abel', sans-serif;
+        text-align: center;
+      }
+      .link {
+        color: black;
+        font-size: 25px;
+        padding: 10px;
+        margin-right: 10px;
+        border-radius: 15px 15px 15px 15px;
+        font-family: 'Abel', sans-serif;
+        text-align: center;
+        outline: none;
+      }
+      .link:hover {
+        text-decoration: none;
+        background-color: rgb(41,41,41) !important;
+        color: #6EEFBE;
+      }
+      a:link  {
+        outline: none;
+        text-decoration: none;
+      }
       .collapsed-para {
         margin-left: 50px;
         font-size: 20px;
+      }
+
+      .collapseLink {
+        color: white;
       }
 
       @media (max-device-width: 799px) {
@@ -69,7 +101,10 @@
         label {
           font-size: 16px;
         }
-        #skillsPic {
+        #skills h1 {
+          margin-left: 50px;
+        }
+        .skillsPic {
           width: 100px;
           height: 50px;
           margin: 20px;
@@ -82,7 +117,32 @@
     </style>
   </head>
   <body >
-    <div id="Head" style="">
+    <nav class="navbar navbar-toggleable-md navbar-fixed-top" style="background-color: #6EEFBE; margin: 0px; padding-top: 10px; ">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" onclick="toggleSwitch('nav')" >
+            <span class="glyphicon glyphicon-chevron-down"   id="nav" />
+          </button>
+          <a class="navbar-brand" class="navbar-brand" id="brandLink"> Muhammad Bilal <span class="glyph glyphicon"></span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/MuhammadBIlalQC/" class="link" target="_blank"> GitHub </a></li>
+            <li><a href="https://github.com/MuhammadBIlalQC/" class="link" target="_blank"> LinkedIn </a></li>
+            <li><a href="#" class="link" data-toggle="modal" data-target=".bs-example-modal-lg" > Contact </a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="padding: 10px; color: rgb(41,41,41); background-color: #6EEFBE; border: solid 5px rgb(41,41,41);">
+          <p> Email: MuhammadBilalQC@hotmail.com <br>
+              Phone: 929-329-7168 <br>
+          </p>
+        </div>
+      </div>
     </div>
     <div class="container" id="content" >
       <div class="row">
@@ -102,12 +162,13 @@
 
         <div id="education" class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
           <h1 style="text-align: left;"> Academics </h1>
-          <label data-toggle="collapse" data-target="#schoolsAndDegrees" aria-expanded="false" onclick="toggleSchoolsandDegrees('expandSchoolGlyph')" >Schools and Degrees
-            <span  id="expandSchoolGlyph" style="margin-left: 30px;" class="glyphicon glyphicon-menu-down"></span> </labeL>
+          <label data-toggle="collapse" data-target="#schoolsAndDegrees" aria-expanded="false" onclick="toggleSwitch('expandSchoolGlyph')" >Schools and Degrees
+            <span  id="expandSchoolGlyph" style="margin-left: 50px;" class="glyphicon glyphicon-menu-down"></span> </labeL>
           <div id="schoolsAndDegrees" class="collapse collapsed-para">
             John Bowne High School From 20xx - 20xx General High School Diploma <br>
             Queens College - From 20xx - Present Pursing BS in Computer Science
           </div>
+          <br>
           <p>
             Okay. You got me. Nothing impressive to show. As a matter of fact, barely passed high school and I am struggling to motivate myself to
             stay in college. I am not a fan of classroom structured teaching. Memorizing strict procedures to solving a problem in an exam does not help my
@@ -117,21 +178,41 @@
         </div>
         <div id="projects" class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
           <h1 style="text-align: right;"> Projects </h1>
+          <label data-toggle="collapse" data-target="#oldPortExp" aria-expanded="true" onclick="toggleSwitch('OldPort')" style="width: 300px; margin-bottom: 30px;">Old Portfolio
+            <span  id="OldPort" style="margin-left: 50px; float: right;" class="glyphicon glyphicon-menu-down"></span> </labeL>
+          <div id="oldPortExp" class="collapse collapsed-para">
+
+              GitHub Link: <a href="https://github.com/MuhammadBIlalQC/Portfolio" class="collapseLink">https://github.com/MuhammadBIlalQC/ProjectZ </a> <br> <br>
+              I made this portfolio around June when I first started learning. My friend showed me his and I wanted to make my own. Simple use of Bootstrap.
+              <a href="https://muhammadbilalqc.github.io/Portfolio/Old%20Portfolio/portfolio.html" style="color: #6EEFBE;" target="_blank" > Let me see it! </a> </br>
+          </div>
+          <br>
+          <label data-toggle="collapse" data-target="#SocialHubExp" aria-expanded="true" onclick="toggleSwitch('SocialHub')" style="width: 300px;">SocialHub
+            <span  id="SocialHub" style="margin-left: 50px; float: right;" class="glyphicon glyphicon-menu-down"></span> </labeL>
+          <div id="SocialHubExp" class="collapse collapsed-para">
+              GitHub Link: <a href="https://github.com/MuhammadBIlalQC/ProjectZ" class="collapseLink">https://github.com/MuhammadBIlalQC/ProjectZ </a> <br> <br>
+              A facebook-inspired project I have been working on. The project uses Node.js & Expres.js for backend and React.js & Bootstrap for front-end. The purpose of
+              building this site was to get my hands dirty on React and Node. I was learning and realized that I wanted to have some fun. So I thought of the hardest
+              and most interesting idea I could build, and started coding. Although the website is not complete, it has a light login feature along with fully functional
+              standard social media update option and fully functional messaging. As I was coding, I thought of ideas that I want to implement and would like to finish those
+              before I publish the website using Heroku.
+          </div>
+          <br>
         </div>
-        <div id="skills" class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+        <div id="skills" class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
           <h1 style="text-align: left;"> Skills and Technologies </h1>
-          <img src="images/web.png" id="skillsPic">
-          <img src="images/react.png" id="skillsPic">
-          <img src="images/node.png" id="skillsPic">
-          <img src="images/express.png" id="skillsPic"> <br>
-          <img src="images/cpp.png" id="skillsPic">
-          <img src="images/java.png" id="skillsPic">
+          <img src="images/web.png" class="skillsPic">
+          <img src="images/react.png" class="skillsPic">
+          <img src="images/node.png" class="skillsPic">
+          <img src="images/express.png" class="skillsPic"> <br>
+          <img src="images/cpp.png" class="skillsPic">
+          <img src="images/java.png" class="skillsPic">
         </div>
 
     </div>
     <script>
       const toggle = {};
-      function toggleSchoolsandDegrees(id){
+      function toggleSwitch(id){
         if (toggle.id == null)
           toggle.id = false;
         if (toggle.id)
@@ -146,87 +227,6 @@
           }
       }
 
-    </script>
-    <script type="text/babel">
-      class NavLink extends React.Component {
-        constructor(props) {
-          super(props);
-          this.linkStyle = {
-            color: 'black',
-            fontSize: '25px',
-            marginTop: '5px',
-            borderRadius: '15px 15px 15px 15px',
-            fontFamily: "'Abel', sans-serif",
-            textAlign: 'center',
-          };
-        }
-        hoverIn(e) {
-          const style = e.target.style;
-          style.backgroundColor = 'rgb(41,41,41)';
-          style.color = '#6EEFBE';
-        }
-        hoverOut(e) {
-          const style = e.target.style;
-          style.backgroundColor = '#6EEFBE';
-          style.color = 'black';
-        }
-        render() {
-          var hoverIn;
-          var hoverOut;
-          if (this.props.disableHighLight)
-          {
-            hoverIn = hoverOut = '';
-          }
-          else
-          {
-            hoverIn = this.hoverIn;
-            hoverOut = this.hoverOut
-          }
-          return (<a className={this.props.navc} style={this.linkStyle} target="_blank" href={this.props.link} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>
-                    {this.props.text}
-                    <span className={this.props.glyph} style={{marginLeft: '5px'}} />
-                  </a>)
-        }
-      }
-      NavLink.defaultProps = {
-        navc: '',
-      }
-      class Nav extends React.Component {
-        constructor(props) {
-          super(props);
-          this.navStyle = {
-            backgroundColor: '#6EEFBE',
-              margin: '0px',
-
-          }
-
-        }
-
-        render() {
-          return (
-            <nav className="navbar navbar-toggleable-md navbar-light bg-faded navbar-fixed-top" style={this.navStyle}>
-              <div className="container-fluid">
-                <div className="navbar-header">
-                  <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"  >
-                    <NavLink glyph="glyphicon glyphicon-chevron-down"  disableHighLight={true} />
-                    <span className="icon-bar"></span>
-                    <span className="icon-bar"></span>
-                  </button>
-                  <NavLink navc="navbar-brand" link="#" text="Muhammad Bilal" />
-                </div>
-                <div className="collapse navbar-collapse" id="myNavbar">
-                  <ul className="nav navbar-nav navbar-right">
-                    <li><NavLink link="https://github.com/MuhammadBIlalQC/" text="Github" /></li>
-                    <li><NavLink link="https://www.linkedin.com/in/muhammad-bilal-338686149/" text="Linkedin" /></li>
-                    <li><NavLink link="#" text="Contact" /></li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-          )
-        }
-      }
-      ReactDOM.render(<Nav />, document.getElementById('Head'));
     </script>
   </body>
 </html>
