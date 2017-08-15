@@ -30,6 +30,10 @@
         font-family: 'Abel', sans-serif;
         font-size: 30px;
       }
+      label {
+        font-size: 24px;
+        margin-left: 20px;
+      }
       #content {
         position: relative;
         color: #ADE9FF;
@@ -38,24 +42,22 @@
         background-color: rgb(41,41,41);
         padding: 0px 40px 80px 0px;
       }
-      #schoolsAndDegrees {
-        font-size: 16px;
-        overflow: hidden;
-        display: block;
-        width: 300px;
-        height: 35px;
-        margin-left: 50px;
-      }
 
       #skillsPic {
-        width: 300px;
-        height: 150px;
+        width: 150px;
+        height: 75px;
         margin: 30px;
+      }
+
+      .collapsed-para {
+        margin-left: 50px;
+        font-size: 20px;
       }
 
       @media (max-device-width: 799px) {
         p {
-          font-size: 20px;
+          font-size: 16px;
+          margin-left: 20px;
         }
         h1 {
           margin-top: 40px;
@@ -64,10 +66,16 @@
           font-Size: 40px;
         }
 
+        label {
+          font-size: 16px;
+        }
         #skillsPic {
-          width: 200px;
-          height: 100px;
+          width: 100px;
+          height: 50px;
           margin: 20px;
+        }
+        .collapsed-para {
+          font-size: 12px;
         }
       }
 
@@ -79,76 +87,64 @@
     <div class="container" id="content" >
       <div class="row">
         <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
-          <div id="intro" style="margin-bottom: 80px;">
+          <div id="intro" style="margin-bottom: 80px; padding-top: 80px;">
             <h1>
               Hello World!
             </h1>
             <p>
-              I am a programming hobbyist. Currently I am pursiuing a degree in Computer Science from Queens College.
-              From User Interface Design to Algorithms, I am eager to learn. I have been learned to code on my own since
-              9th grade! Armed with Javascript technologies such as React, Node and Angular, I am ready to tackle any website!
+              My name is Muhammad Bilal. I am a programming hobbyist, and I am currently studying computer science at Queens College.
+              I am a self learner, and taught myself how to code in 9th grade.
+              From User Interface Design to Algorithms, I am eager to learn. Armed with Javascript technologies such as React, Node and Angular,
+               I am ready to tackle any website!
             </p>
           </div>
         </div>
 
         <div id="education" class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
           <h1 style="text-align: left;"> Academics </h1>
-          <label id="schoolsAndDegrees" >
-            <span style="font-size: 24px;"> Schools and Degrees </span>
-            <a style="float: right; background-color: rgb(41,41,41); border: none;"  onclick="toggleSchoolsandDegrees()">
-              <span id="expansion" style="margin-top: 8px;" class="glyphicon glyphicon-menu-down"></span>
-            </a>
-            <br><br>
-            <div style="margin-left: 10px;">
-              John Bowne High School From 20xx - 20xx General High School Diploma <br><br>
-              Queens College - From 20xx - Present Pursing Bachelour of Scheice in Computer Scienec
-            </div>
-          </label>
+          <label data-toggle="collapse" data-target="#schoolsAndDegrees" aria-expanded="false" onclick="toggleSchoolsandDegrees('expandSchoolGlyph')" >Schools and Degrees
+            <span  id="expandSchoolGlyph" style="margin-left: 30px;" class="glyphicon glyphicon-menu-down"></span> </labeL>
+          <div id="schoolsAndDegrees" class="collapse collapsed-para">
+            John Bowne High School From 20xx - 20xx General High School Diploma <br>
+            Queens College - From 20xx - Present Pursing BS in Computer Science
+          </div>
           <p>
             Okay. You got me. Nothing impressive to show. As a matter of fact, barely passed high school and I am struggling to motivate myself to
             stay in college. I am not a fan of classroom structured teaching. Memorizing strict procedures to solving a problem in an exam does not help my
             problem solving methodology. I see failing as a key to success. So when I fail an exam, I am not thinking of whether I am going to fail the class
             or not but of the questions I got wrong and why I got them wrong.
           </p>
-
         </div>
-
+        <div id="projects" class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+          <h1 style="text-align: right;"> Projects </h1>
+        </div>
         <div id="skills" class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
-          <h1 style="text-align: right;"> Skills and Technologies </h1>
+          <h1 style="text-align: left;"> Skills and Technologies </h1>
           <img src="images/web.png" id="skillsPic">
           <img src="images/react.png" id="skillsPic">
           <img src="images/node.png" id="skillsPic">
           <img src="images/express.png" id="skillsPic"> <br>
-          <img src="images/linux.png" id="skillsPic">
           <img src="images/cpp.png" id="skillsPic">
           <img src="images/java.png" id="skillsPic">
-          <img src="images/mysql.png" >
         </div>
+
     </div>
     <script>
-      var toggled = false;
-      function toggleSchoolsandDegrees(e){
-        if (toggled)
-        {
-          height = '35px';
-          width = '400px';
-          document.getElementById('expansion').className = 'glyphicon glyphicon-menu-down';
-        }
+      const toggle = {};
+      function toggleSchoolsandDegrees(id){
+        if (toggle.id == null)
+          toggle.id = false;
+        if (toggle.id)
+          {
+            document.getElementById(id).className = 'glyphicon glyphicon-menu-down';
+            toggle.id = false;
+          }
         else
-        {
-          height = '150px';
-          width = '700px';
-          if (document.documentElement.clientWidth < 600)
-            height = '250px';
-          document.getElementById('expansion').className = 'glyphicon glyphicon-menu-left';
-        }
-        $('#schoolsAndDegrees').animate({
-          height: height,
-          width: width,
-        });
-        toggled = !toggled;
+          {
+            document.getElementById(id).className = 'glyphicon glyphicon-menu-left';
+            toggle.id = true;
+          }
       }
-
 
     </script>
     <script type="text/babel">
@@ -186,7 +182,7 @@
             hoverIn = this.hoverIn;
             hoverOut = this.hoverOut
           }
-          return (<a className={this.props.navc} style={this.linkStyle} href={this.props.link} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>
+          return (<a className={this.props.navc} style={this.linkStyle} target="_blank" href={this.props.link} onMouseEnter={hoverIn} onMouseLeave={hoverOut}>
                     {this.props.text}
                     <span className={this.props.glyph} style={{marginLeft: '5px'}} />
                   </a>)
@@ -201,13 +197,14 @@
           this.navStyle = {
             backgroundColor: '#6EEFBE',
               margin: '0px',
+
           }
 
         }
 
         render() {
           return (
-            <nav className="navbar navbar-toggleable-md navbar-light bg-faded" style={this.navStyle}>
+            <nav className="navbar navbar-toggleable-md navbar-light bg-faded navbar-fixed-top" style={this.navStyle}>
               <div className="container-fluid">
                 <div className="navbar-header">
                   <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"  >
@@ -219,10 +216,9 @@
                 </div>
                 <div className="collapse navbar-collapse" id="myNavbar">
                   <ul className="nav navbar-nav navbar-right">
-                    <li><NavLink link="#" text="About" /></li>
-                    <li><NavLink link="#" text="Education" /></li>
-                    <li><NavLink link="#" text="Experience" /></li>
-                    <li><NavLink link="#" text="Skills" /></li>
+                    <li><NavLink link="https://github.com/MuhammadBIlalQC/" text="Github" /></li>
+                    <li><NavLink link="https://www.linkedin.com/in/muhammad-bilal-338686149/" text="Linkedin" /></li>
+                    <li><NavLink link="#" text="Contact" /></li>
                   </ul>
                 </div>
               </div>
