@@ -60,6 +60,7 @@
       }
       .link {
         color: black;
+		background-color: #6EEFBE;
         font-size: 25px;
         padding: 10px;
         margin-right: 10px;
@@ -127,7 +128,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://github.com/MuhammadBIlalQC/" class="link" target="_blank"> GitHub </a></li>
+            <li><a href="https://github.com/MuhammadBIlalQC/" class="link" id="GitHubLink" onclick="changeToNormalStyle('GitHubLink')" target="_blank"> GitHub </a></li>
             <li><a href="https://github.com/MuhammadBIlalQC/" class="link" target="_blank"> LinkedIn </a></li>
             <li><a href="#" class="link" data-toggle="modal" data-target=".bs-example-modal-lg" > Contact </a></li>
           </ul>
@@ -152,11 +153,18 @@
               Hello World!
             </h1>
             <p>
-              My name is Muhammad Bilal. I am a programming hobbyist, and I am currently studying computer science at Queens College.
-              I am a self learner, and taught myself how to code in 9th grade.
-              From User Interface Design to Algorithms, I am eager to learn. Armed with Javascript technologies such as React, Node and Angular,
-               I am ready to tackle any website!
-            </p>
+              I immediately fell in love with programming after my first engineering 
+			  programming course. I ended up switching to Computer Science. Aside from 
+			  school, I self-learned a lot. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			  Maecenas luctus placerat lorem, at ornare augue pretium nec. Nullam in urna non tellus 
+			  malesuada luctus a tempus mi. Nam nec lacinia quam, et volutpat libero. Sed viverra a e
+			  lit eu sagittis. Nulla nunc nunc, tempus eu faucibus quis, congue ac ante. Aliquam 
+			  condimentum a eros vel condimentum. Curabitur ac malesuada augue. Morbi faucibus lacus 
+			  eget diam consequat, eu ultricies eros ultricies. Quisque efficitur porttitor est vel 
+			  efficitur. Praesent egestas ac odio eget dapibus. Nam semper eget leo ac ultrices. 
+			  Nam rutrum dolor nec augue suscipit varius.
+
+			</p>
           </div>
         </div>
 
@@ -170,14 +178,18 @@
           </div>
           <br>
           <p>
-            Okay. You got me. Nothing impressive to show. As a matter of fact, barely passed high school and I am struggling to motivate myself to
-            stay in college. I am not a fan of classroom structured teaching. Memorizing strict procedures to solving a problem in an exam does not help my
-            problem solving methodology. I see failing as a key to success. So when I fail an exam, I am not thinking of whether I am going to fail the class
-            or not but of the questions I got wrong and why I got them wrong.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			  Maecenas luctus placerat lorem, at ornare augue pretium nec. Nullam in urna non tellus 
+			  malesuada luctus a tempus mi. Nam nec lacinia quam, et volutpat libero. Sed viverra a e
+			  lit eu sagittis. Nulla nunc nunc, tempus eu faucibus quis, congue ac ante. Aliquam 
+			  condimentum a eros vel condimentum. Curabitur ac malesuada augue. Morbi faucibus lacus 
+			  eget diam consequat, eu ultricies eros ultricies. Quisque efficitur porttitor est vel 
+			  efficitur. Praesent egestas ac odio eget dapibus. Nam semper eget leo ac ultrices. 
+			  Nam rutrum dolor nec augue suscipit varius.
           </p>
         </div>
         <div id="projects" class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
-          <h1 style="text-align: right;"> Projects </h1>
+          <h1 style="text-align: left;"> Projects </h1>
           <label data-toggle="collapse" data-target="#oldPortExp" aria-expanded="true" onclick="toggleSwitch('OldPort')" style="width: 300px; margin-bottom: 30px;">Old Portfolio
             <span  id="OldPort" style="margin-left: 50px; float: right;" class="glyphicon glyphicon-menu-down"></span> </labeL>
           <div id="oldPortExp" class="collapse collapsed-para">
@@ -226,6 +238,11 @@
             toggle.id = true;
           }
       }
+	  
+	  function changeToNormalStyle(id) {
+		var element = document.getElementById(id);
+		element.style.backgroundColor = "#6EEFBE";
+	  }
 
     </script>
   </body>
