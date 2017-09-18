@@ -17,19 +17,10 @@
     <!--- End of External Scripts and stylesheets --->
 
     <style>
-        * {
-            text-align: justify;
-            
-        }
-        
-        *:selection {
-            -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none;
-        }
+		body {	
+        background-color: rgb(41,41,41);
+		
+	  }
       h1 {
         margin-top: 80px;
         margin-bottom: 50px;
@@ -47,14 +38,15 @@
         font-size: 24px;
         margin-left: 20px;
       }
+	  
       #content {
-        position: relative;
         color: #ADE9FF;
-        width: 100%;
         padding: 0px;
-        background-color: rgb(41,41,41);
         padding: 0px 40px 80px 0px;
       }
+	  #heading {
+		text-align: center;
+	  }
 
       .skillsPic {
         width: 150px;
@@ -159,7 +151,7 @@
       </div>
     </div>
     <div class="container" id="content" >
-      <div class="row">
+      <div class="row" >
         <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
           <div id="intro" style="margin-bottom: 80px; padding-top: 80px;">
             <h1>
@@ -183,14 +175,14 @@
         </div>
 
         <div id="education" class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
-          <h1 style="text-align: left;"> Academics </h1>
+          <h1  > Academics </h1>
           <label data-toggle="collapse" data-target="#schoolsAndDegrees" aria-expanded="false" onclick="toggleSwitch('expandSchoolGlyph')" >Schools and Degrees
             <span  id="expandSchoolGlyph" style="margin-left: 50px;" class="glyphicon glyphicon-menu-down"></span> </labeL>
           <div id="schoolsAndDegrees" class="collapse collapsed-para">
             John Bowne High School From 20xx - 20xx General High School Diploma <br>
             Queens College - From 20xx - Present Pursing BS in Computer Science
           </div>
-          <br>
+          <br />
           <p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 			  Maecenas luctus placerat lorem, at ornare augue pretium nec. Nullam in urna non tellus 
@@ -203,7 +195,7 @@
           </p>
         </div>
         <div id="projects" class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
-          <h1 style="text-align: left;"> Projects </h1>
+          <h1 class="heading"> Projects </h1>
           <label data-toggle="collapse" data-target="#oldPortExp" aria-expanded="true" onclick="toggleSwitch('OldPort')" style="width: 300px; margin-bottom: 30px;">Old Portfolio
             <span  id="OldPort" style="margin-left: 50px; float: right;" class="glyphicon glyphicon-menu-down"></span> </labeL>
           <div id="oldPortExp" class="collapse collapsed-para">
@@ -226,7 +218,7 @@
           <br>
         </div>
         <div id="skills" class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
-          <h1 style="text-align: left;"> Skills and Technologies </h1>
+          <h1 class="heading"> Skills and Technologies </h1>
           <img src="images/web.png" class="skillsPic">
           <img src="images/react.png" class="skillsPic">
           <img src="images/node.png" class="skillsPic">
