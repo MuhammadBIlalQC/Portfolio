@@ -155,7 +155,7 @@
               Hello World!
             </h1>
             <p>
-              I am a College Student who is pursing a Bachelours in Computer Science.
+              I am a College Student who is pursing a Bachelors  in Computer Science.
 			  Currently, I am a junior taking upper level computer science courses. I do not know 
 			  what to say so I am going to add filler text proceeding this sentence.
 			  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -185,9 +185,9 @@
         </div>
         <div id="projects" class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
           <h1 class="heading"> Projects </h1>
-          <label data-toggle="collapse" data-target="#oldPortExp" aria-expanded="true" onclick="toggleSwitch('OldPort')" style="width: 300px; margin-bottom: 30px;">Old Portfolio
-            <span  id="OldPort" style="margin-left: 50px; float: right;" class="glyphicon glyphicon-menu-down"></span> </labeL>
-          <div id="oldPortExp" class="collapse collapsed-para">
+          <label data-toggle="collapse" data-target="#oldPortExp" aria-expanded="false" onclick="toggleSwitch('OldPort')" style="width: 300px; margin-bottom: 30px;">Old Portfolio
+            <span  id="OldPort" style="margin-left: 50px; float: right;" class="glyphicon glyphicon-menu-left"></span> </labeL>
+          <div id="oldPortExp" class="collapse collapsed-para in"  >
 
               GitHub Link: <a href="https://github.com/MuhammadBIlalQC/Portfolio" class="collapseLink">https://github.com/MuhammadBIlalQC/ProjectZ </a> <br> <br>
               I made this portfolio around June when I first started learning. My friend showed me his and I wanted to make my own. Simple use of Bootstrap.
@@ -195,8 +195,8 @@
           </div>
           <br>
           <label data-toggle="collapse" data-target="#SocialHubExp" aria-expanded="true" onclick="toggleSwitch('SocialHub')" style="width: 300px;">SocialHub
-            <span  id="SocialHub" style="margin-left: 50px; float: right;" class="glyphicon glyphicon-menu-down"></span> </labeL>
-          <div id="SocialHubExp" class="collapse collapsed-para">
+            <span  id="SocialHub" style="margin-left: 50px; float: right;" class="glyphicon glyphicon-menu-left"></span> </labeL>
+          <div id="SocialHubExp" class="collapse collapsed-para in">
               GitHub Link: <a href="https://github.com/MuhammadBIlalQC/ProjectZ" class="collapseLink" target="_blank" >https://github.com/MuhammadBIlalQC/ProjectZ </a> <br> <br>
               A facebook-inspired project I have been working on. The project uses Node.js & Expres.js for backend and React.js & Bootstrap for front-end. The purpose of
               building this site was to get my hands dirty on React and Node. I was learning and realized that I wanted to have some fun. So I thought of the hardest
@@ -218,19 +218,17 @@
 
     </div>
     <script>
-      const toggle = {};
+      const toggle = {'OldPort': true, 'SocialHub': true, 'nav': false,  'expandSchoolGlyph': false};
       function toggleSwitch(id){
-        if (toggle.id == null)
-          toggle.id = false;
-        if (toggle.id)
+        if (toggle[id])
           {
             document.getElementById(id).className = 'glyphicon glyphicon-menu-down';
-            toggle.id = false;
+            toggle[id] = false;
           }
         else
           {
             document.getElementById(id).className = 'glyphicon glyphicon-menu-left';
-            toggle.id = true;
+            toggle[id] = true;
           }
       }
 	  
