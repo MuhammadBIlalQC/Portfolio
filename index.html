@@ -5,8 +5,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <title>Muhammad's Portfolio</title>
     <style>
+        * {
+            font-family: 'Open Sans', sans-serif;
+        } 
         .navbar {
             background-color: rgba(0,0,0,0) !important;
             z-index: 10;
@@ -23,6 +27,10 @@
         .my-progress {
             font-size: 22px;
         }
+        
+        .experience-li {
+            margin-top: 40px;
+        }
         #home-banner {
             min-width: 100%;
             position: absolute;
@@ -32,6 +40,30 @@
         #about-me {
             font-family: 'Poiret One', cursive;
             font-size: 22px;
+        }
+        
+        #experience-section p {
+            font-size: 24px;
+            padding-left: 10px;
+            line-height: 40px;
+        }
+        
+        #footer {
+            background-color: black;
+            margin-top: 40px;
+        }
+        
+        #footer a {
+            color: white;
+            font-size: 16px;
+        }
+        
+        #footer a:hover {
+            background-color: gray;
+        }
+        
+        #footer li {
+            float: right;
         }
     </style>
 </head>
@@ -51,19 +83,19 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#">Github</a>
+                        <a href="https://github.com/MuhammadBIlalQC/" target="_blank">Github</a>
                     </li>
                     <li>
-                        <a href="#">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/muhammad-bilal-2017/" target="_blank">LinkedIn</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="#" target="_blank">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <img id="home-banner" src="home-banner.svg" style="visibility: hidden;"/>
+    <img id="home-banner" src="images/home-banner.svg" style="visibility: hidden;"/>
     <script>
         $(document).ready(function(){
             function fixHeight()
@@ -94,7 +126,7 @@
                 </p>
             </div>
             <div class="col-sm-12 col-md-6">
-                <img src="cat.svg" class="img-fluid rounded"  style="width: 100%;">
+                <img src="images/cat.svg" class="img-fluid rounded"  style="width: 100%;">
             </div>
         </div>
         <div class="row">
@@ -130,10 +162,53 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <img src="computer-2583383_960_720.jpg" style="max-width: 100%; max-height: 100%;" class="img-thumbnail" />
+            <div class="col-xs-12 col-md-6">
+                <img src="images/computer-2583383_960_720.jpg" style="max-width: 100%; max-height: 100%;" class="img-thumbnail" />
             </div>
         </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-12" id="experience-section">
+                <h1 style="width: 100%;text-align: center;">Experience</h1>
+                <div class="experience-li">
+                    <h2 class="text-primary">Alzerina Jewelry <span class="text-muted">[Front End Engineer]</span></h2>
+                    <p>
+                        Using HTML, CSS, Bootstrap, JavaScript and jQuery, updated
+                        websites. <br />
+                        Increased traffic using Search Engine Optimization by adding
+                        relevant keywords into each page appropriately, added alt attributes
+                        to images, and updated each pages title and meta description for
+                        user friendly search results.
+                    </p>
+                </div>
+                <div class="experience-li">
+                    <h2 class="text-primary">Social Hub <span class="text-muted">[Personal Full Stack Project]</span></h2>
+                    <p>
+                        Created a basic social media website using HTML, CSS, Bootstrap,
+                        React.js, Node.js and Express.js <br />
+                        Able to send friend requests. <br />
+                        Fully functional messaging system implemented along with social
+                        media posting.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid" style="width: 100%; padding: 0px;">
+        <ul class="nav nav-pills" id="footer">
+            <li role="presentation">
+                <a href="https://github.com/MuhammadBIlalQC/" target="_blank">GitHub</a>
+            </li>
+            <li role="presentation">
+                <a href="https://www.linkedin.com/in/muhammad-bilal-2017/" target="_blank">LinkedIn</a>
+            </li>
+            <li role="presentation">
+                <a href="#">Contact</a>
+            </li>
+            <li role="presentation">
+                <a href="http://muhammad-bilal.com/Resume/Resume.pdf" target="_blank">Resume</a>
+            </li>
+        </ul>
     </div>
 </body>
 </html>
