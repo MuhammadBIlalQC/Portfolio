@@ -1,246 +1,131 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--- External Scripts and stylesheets --->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous">
-    </script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-                crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Abel|Gloria+Hallelujah" rel="stylesheet">
-    <!--- End of External Scripts and stylesheets --->
-
+<head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <title>Muhammad's Portfolio</title>
     <style>
-		body {	
-        background-color: rgb(41,41,41);
-	  }
-      h1 {
-        margin-top: 80px;
-        margin-bottom: 50px;
-        text-align: center;
-        font-Size: 60px;
-        font-family: 'Gloria Hallelujah', cursive;
-        color: #6EEFBE;
-      }
-
-      p {
-        font-family: 'Abel', sans-serif;
-        font-size: 24px;
-      }
-      label {
-        font-size: 24px;
-        margin-left: 20px;
-      }
-	  
-      #content {
-        color: #ADE9FF;
-      }
-	  #heading {
-		text-align: center;
-	  }
-
-      .skillsPic {
-        width: 150px;
-        height: 75px;
-        margin: 30px;
-      }
-
-      #brandLink {
-        color: black;
-        font-size: 25px;
-        padding: 10px;
-        margin-right: 10px;
-        border-radius: 15px 15px 15px 15px;
-        font-family: 'Abel', sans-serif;
-        text-align: center;
-      }
-      .link {
-        color: black;
-		background-color: #6EEFBE;
-        font-size: 25px;
-        padding: 10px;
-        margin-right: 10px;
-        border-radius: 15px 15px 15px 15px;
-        font-family: 'Abel', sans-serif;
-        text-align: center;
-        outline: none;
-      }
-      .link:hover {
-        text-decoration: none;
-        background-color: rgb(41,41,41) !important;
-        color: #6EEFBE;
-      }
-      a:link  {
-        outline: none;
-        text-decoration: none;
-      }
-      .collapsed-para {
-        margin-left: 50px;
-        font-size: 20px;
-      }
-
-      .collapseLink {
-        color: white;
-      }
-
-      @media (max-device-width: 799px) {
-        p {
-          font-size: 20px;
-          margin-left: 20px;
+        .navbar {
+            background-color: rgba(0,0,0,0) !important;
+            z-index: 10;
         }
-        h1 {
-          margin-top: 40px;
-          margin-bottom: 30px;
-          text-align: center;
-          font-Size: 40px;
+        
+        .navbar a{
+            font-size: 125%;
         }
-
-        label {
-          font-size: 16px;
+        
+        .navbar a:hover {
+            color: black !important;
         }
-        #skills h1 {
-          margin-left: 50px;
+        
+        .my-progress {
+            font-size: 22px;
         }
-        .skillsPic {
-          width: 100px;
-          height: 50px;
-          margin: 20px;
+        #home-banner {
+            min-width: 100%;
+            position: absolute;
+            top: -40px;
         }
-        .collapsed-para {
-          font-size: 12px;
+        
+        #about-me {
+            font-family: 'Poiret One', cursive;
+            font-size: 22px;
         }
-      }
-
+        
+        .row {
+            margin-top: 60px;
+        }
     </style>
-  </head>
-  <body >
-    <nav class="navbar navbar-toggleable-md navbar-fixed-top" style="background-color: #6EEFBE; margin: 0px; padding-top: 10px; ">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" onclick="toggleSwitch('nav')" >
-            <span class="glyphicon glyphicon-chevron-down"   id="nav" />
-          </button>
-          <a class="navbar-brand" class="navbar-brand" id="brandLink"> Muhammad Bilal <span class="glyph glyphicon"></span></a>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Muhammad Bilal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0 nav navbar-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Github</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">LinkedIn</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://github.com/MuhammadBIlalQC/" class="link" id="GitHubLink" onclick="changeToNormalStyle('GitHubLink')" target="_blank"> GitHub </a></li>
-            <li><a href="https://github.com/MuhammadBIlalQC/" class="link" id="LinkedInLink" onclick="changeToNormalStyle('LinkedInLink')" target="_blank"> LinkedIn </a></li>
-            <li><a href="#" class="link" data-toggle="modal" data-target=".bs-example-modal-lg"  id="ContactLink" onclick="changeToNormalStyle('ContactLink')"> Contact </a></li>
-			<li><a href="Resume/Resume.pdf" class="link" id="ResumeLink" onclick="changeToNormalStyle('ResumeLink')" target="_blank"> Resume </a></li>
-          </ul>
-        </div>
-      </div>
     </nav>
-
-    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content" style="padding: 10px; color: rgb(41,41,41); background-color: #6EEFBE; border: solid 5px rgb(41,41,41);">
-          <p> Email: MuhammadBilalQC@hotmail.com <br>
-              Phone: 929-329-7168 <br>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="container" id="content" >
-      <div class="row" >
-        <div class="col-xs-12 col-md-8 col-md-offset-2">
-          <div id="intro" style="margin-bottom: 80px; padding-top: 80px;">
-            <h1>
-              Hello World!
-            </h1>
-            <p>
-              I am a student at Queens College pursuing Computer Science. Currently, I am 
-			  a Junior. What makes me different from other students is I am not in College to get a degree; 
-			  I am here to learn. So in my spare time, I 
-			  am usually consolidating my craft. I am looking for an oppurtunity to grow my skills
-			  and learn from professionals.
-
-			</p>
-          </div>
-        </div>
-
-        <div id="education" class="col-xs-12 col-md-12">
-          <h1  > Academics </h1>
-          <label data-toggle="collapse" data-target="#schoolsAndDegrees" aria-expanded="false" onclick="toggleSwitch('expandSchoolGlyph')" >Schools and Degrees
-            <span  id="expandSchoolGlyph" style="margin-left: 50px;" class="glyphicon glyphicon-menu-down"></span> </labeL>
-          <div id="schoolsAndDegrees" class="collapse collapsed-para">
-            <u>John Bowne High School</u> - General High School Diploma <br> <br>
-            <u>Queens College</u> - Computer Science, BA (2019) GPA: 3.0
-          </div>
-          <br />
-          <p>
-			I love learning but when it comes to classroom-structured learning, I do sort of struggle.
-			For example, when in my discrete mathematics class when we were learning Mathematical 
-			Induction, I understood it rather easily but the problem was I did not understand what the point 
-			of the base case was or what Induction was used for. Fast-forward to summer, I was learning algorithms 
-			on my own but before I began, I reviewed Induction and Recursion again. The reason for Mathematical Induction 
-			was to prove a formula's correctness especiailly when it came to Recursion. Discrete mathemamtics immediately clicked 
-			and later in that summer when I decided to take Data Structures, I aced the class. The problem with classroom-strucuted
-			learning was that everyone is so stressed over passing the exams, that they forget the point of college. College is a place to
-			learn and grow as an individual not to pass tests and get a degree. 
-          </p>
-        </div>
-        <div id="projects" class="col-xs-10 col-xs-offset-1 col-md-12">
-          <h1 class="heading"> Projects </h1>
-          <label data-toggle="collapse" data-target="#oldPortExp" aria-expanded="false" onclick="toggleSwitch('OldPort')" style="width: 300px; margin-bottom: 30px;">Old Portfolio
-            <span  id="OldPort" style="margin-left: 50px; float: right;" class="glyphicon glyphicon-menu-left"></span> </labeL>
-          <div id="oldPortExp" class="collapse collapsed-para in"  >
-
-              GitHub Link: <a href="https://github.com/MuhammadBIlalQC/Portfolio" class="collapseLink">https://github.com/MuhammadBIlalQC/ProjectZ </a> <br> <br>
-              I made this portfolio around June when I first started learning. My friend showed me his and I wanted to make my own. Simple use of Bootstrap.
-              <a href="https://muhammadbilalqc.github.io/Portfolio/Old%20Portfolio/portfolio.html" style="color: #6EEFBE;" target="_blank" > Let me see it! </a> </br>
-          </div>
-          <br>
-          <label data-toggle="collapse" data-target="#SocialHubExp" aria-expanded="true" onclick="toggleSwitch('SocialHub')" style="width: 300px;">SocialHub
-            <span  id="SocialHub" style="margin-left: 50px; float: right;" class="glyphicon glyphicon-menu-left"></span> </labeL>
-          <div id="SocialHubExp" class="collapse collapsed-para in">
-              GitHub Link: <a href="https://github.com/MuhammadBIlalQC/ProjectZ" class="collapseLink" target="_blank" >https://github.com/MuhammadBIlalQC/ProjectZ </a> <br> <br>
-              A facebook-inspired project I have been working on. The project uses Node.js & Expres.js for backend and React.js & Bootstrap for front-end. The purpose of
-              building this site was to get my hands dirty on React and Node. I was learning and realized that I wanted to have some fun. So I thought of the hardest
-              and most interesting idea I could build, and started coding. Although the website is not complete, it has a light login feature along with fully functional
-              standard social media update option and fully functional messaging. As I was coding, I thought of ideas that I want to implement and would like to finish those
-              before I publish the website using Heroku.
-          </div>
-          <br>
-        </div>
-        <div id="skills" class="col-xs-12 col-xs-offset-0 col-md-12">
-          <h1 class="heading"> Skills and Technologies </h1>
-          <img src="images/web.png" class="skillsPic">
-          <img src="images/react.png" class="skillsPic">
-          <img src="images/node.png" class="skillsPic">
-          <img src="images/express.png" class="skillsPic"> <br>
-          <img src="images/cpp.png" class="skillsPic">
-          <img src="images/java.png" class="skillsPic">
-        </div>
-
-    </div>
+    <img id="home-banner" src="home-banner.svg" />
     <script>
-      const toggle = {'OldPort': true, 'SocialHub': true, 'nav': false,  'expandSchoolGlyph': false};
-      function toggleSwitch(id){
-        if (toggle[id])
-          {
-            document.getElementById(id).className = 'glyphicon glyphicon-menu-down';
-            toggle[id] = false;
-          }
-        else
-          {
-            document.getElementById(id).className = 'glyphicon glyphicon-menu-left';
-            toggle[id] = true;
-          }
-      }
-	  
-	  function changeToNormalStyle(id) {
-		var element = document.getElementById(id);
-		element.style.backgroundColor = "#6EEFBE";
-	  }
-
+        $(document).ready(function(){
+            function fixHeight()
+            {
+                var height = $('#home-banner').height();
+                if (height == 0 || height == undefined)
+                    setTimeout(fixHeight, 200);
+                $('#filler').css('margin-top', height);
+            }
+            fixHeight();
+        });
     </script>
-  </body>
+    <div id="filler"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="23517413_955213207962769_5447121382573791789_n.jpg" class="img-fluid rounded"  style="width: 100%;">
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-5" id="about-me">
+                <h1 style="width: 100%; text-align: center;">Hi, I am Muhammad!</h1> <br/>
+                <p>
+                    My skills lay around the realm of mathematics and algorithms. I am currently in college pursing a bachelour’s in Computer Science in Queens College.
+
+                    I am an ambitious learner, always looking to expand my list of skills. When given the task of projects, I always put time and effort into making sure it is the best possible product. Ensuring all resources and skills are put to work, as well as learning new skills along the way, making the finished as close to perfect as possible. 
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" style="margin-bottom: 40px;">
+                <div class="my-progress">
+                    <p>Problem Solving</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="my-progress">
+                    <p>Programming</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="my-progress">
+                    <p>Algorithms</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="my-progress">
+                    <p>Web Technolgoies</p> 
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="my-progress">
+                    <p>Hard Work</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="computer-2583383_960_720.jpg" style="max-width: 100%; max-height: 100%;" class="img-thumbnail" />
+            </div>
+        </div>
+    </div>
+</body>
 </html>
