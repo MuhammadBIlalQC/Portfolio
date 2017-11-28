@@ -2,8 +2,8 @@
 <html>
 <head>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <title>Muhammad's Portfolio</title>
     <style>
@@ -12,7 +12,7 @@
             z-index: 10;
         }
         
-        .navbar a{
+        .navbar a {
             font-size: 125%;
         }
         
@@ -33,34 +33,37 @@
             font-family: 'Poiret One', cursive;
             font-size: 22px;
         }
-        
-        .row {
-            margin-top: 60px;
-        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Muhammad Bilal</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Muhammad Bilal</a>
+            </div>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0 nav navbar-right">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Github</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">LinkedIn</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">Github</a>
+                    </li>
+                    <li>
+                        <a href="#">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <img id="home-banner" src="home-banner.svg" />
+    <img id="home-banner" src="home-banner.svg" style="visibility: hidden;"/>
     <script>
         $(document).ready(function(){
             function fixHeight()
@@ -70,23 +73,28 @@
                     setTimeout(fixHeight, 200);
                 $('#filler').css('margin-top', height);
             }
-            fixHeight();
+            if ($(document).width() > 768)
+            {
+                $('#home-banner').css('visibility', 'visible');
+                console.log($(document).width());
+                fixHeight();
+            }
+            
         });
     </script>
     <div id="filler"></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <img src="23517413_955213207962769_5447121382573791789_n.jpg" class="img-fluid rounded"  style="width: 100%;">
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-5" id="about-me">
-                <h1 style="width: 100%; text-align: center;">Hi, I am Muhammad!</h1> <br/>
+            <div class="col-sm-12 col-md-offset-1 col-md-5" id="about-me">
+                <h1 style="width: 100%; text-align: center; padding-top: 20px;">Hi, I am Muhammad!</h1> <br/>
                 <p>
                     My skills lay around the realm of mathematics and algorithms. I am currently in college pursing a bachelour’s in Computer Science in Queens College.
 
                     I am an ambitious learner, always looking to expand my list of skills. When given the task of projects, I always put time and effort into making sure it is the best possible product. Ensuring all resources and skills are put to work, as well as learning new skills along the way, making the finished as close to perfect as possible. 
                 </p>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <img src="cat.svg" class="img-fluid rounded"  style="width: 100%;">
             </div>
         </div>
         <div class="row">
