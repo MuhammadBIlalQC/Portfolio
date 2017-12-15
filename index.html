@@ -8,6 +8,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="scripts/ScrollAnimations.js"></script>
     <style>
         * {
             font-family: 'Open Sans', sans-serif;
@@ -117,16 +118,21 @@
     <div id="filler"></div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-offset-1 col-md-5" id="about-me">
-                <h1 style="width: 100%; text-align: center; padding-top: 20px;">Hi, I am Muhammad!</h1> <br/>
-                <p>
-                    My skills lay around the realm of mathematics and algorithms. I am currently in college pursing a bachelour’s in Computer Science in Queens College.
+            <div class="col-sm-12 col-md-offset-1 col-md-5" id="about-me-container">
+                <div id="about-me" style="display: none">
+                    <h1 style="width: 100%; text-align: center; padding-top: 20px;">
+                        Hi, I am Muhammad!
+                    </h1> 
+                    <br/>
+                    <p>
+                        My skills lay around the realm of mathematics and algorithms. I am currently in college pursing a bachelour’s in Computer Science in Queens College.
 
-                    I am an ambitious learner, always looking to expand my list of skills. When given the task of projects, I always put time and effort into making sure it is the best possible product. Ensuring all resources and skills are put to work, as well as learning new skills along the way, making the finished as close to perfect as possible. 
-                </p>
+                        I am an ambitious learner, always looking to expand my list of skills. When given the task of projects, I always put time and effort into making sure it is the best possible product. Ensuring all resources and skills are put to work, as well as learning new skills along the way, making the finished as close to perfect as possible. 
+                    </p>
+                </div>
             </div>
-            <div class="col-sm-12 col-md-6">
-                <img src="images/cat.svg" class="img-fluid rounded"  style="width: 100%;">
+            <div class="col-sm-12 col-md-6" id="cat-container">
+                    <img src="images/cat.svg" id="cat"  class="img-fluid rounded"  style="width: 100%;"> <!-- style="display: none" for animations -->
             </div>
         </div>
         <div class="row">
