@@ -16,7 +16,7 @@ function showAboutMe()
     if(inWindowView('about-me'))
     {
         $(window).off('scroll', showAboutMe);
-        $('#about-me').slideDown(3000);
+        $('#about-me').slideDown(1500);
     }
 }
 
