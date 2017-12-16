@@ -30,7 +30,14 @@ function showCat()
 }
 
 $(document).ready(function(){
-    $(window).on('scroll', showAboutMe);
-    //$(window).on('scroll', showCat);
+    if (window.innerWidth >= 992) /* for devices such as laptops and desktops */
+    {
+        $(window).on('scroll', showAboutMe);
+        //$(window).on('scroll', showCat);
+    }
+    else /* for phones and tablets */
+    {
+        showAboutMe();
+    }
 });
 
