@@ -22,22 +22,20 @@ function showAboutMe()
 
 function showCat()
 {
-    if (inWindowView('cat'))
-    {
-        $(window).off('scroll', showCat);
-        $('#cat').slideToggle(2000);
-    }
+    $(window).off('scroll', showCat);
+    $('#cat').fadeIn(1500);
 }
 
 $(document).ready(function(){
     if (window.innerWidth >= 992) /* for devices such as laptops and desktops */
     {
         $(window).on('scroll', showAboutMe);
-        //$(window).on('scroll', showCat);
+        $(window).on('scroll', showCat);
     }
     else /* for phones and tablets */
     {
         showAboutMe();
+        setTimeout(() => showCat(), 1500);
     }
 });
 
