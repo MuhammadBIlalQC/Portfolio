@@ -28,7 +28,7 @@ function showCat()
 {
     $(window).off('scroll', showCat);
     $('#cat').fadeIn(1500);
-    setTimeout(() => $(window).on('scroll', showProgressbars), 1500);
+    $(window).on('scroll', showProgressbars);
 }
 
 function showProgressbars()
@@ -39,7 +39,7 @@ function showProgressbars()
         $('#progress-bars').slideDown(500);
         setTimeout(() => animateProgressbars(), 500);
         setTimeout(() => show2ndPic(), 500);
-        setTimeout(() => $(window).on('scroll', showExperience), 1500);
+        $(window).on('scroll', showExperience);
     }
 }
 
