@@ -1,3 +1,7 @@
+/* Setting Page to top on Reload */
+//$(window).scrollTop(0);
+/* */
+
 function inWindowView(elementID)
 {
     var elem = $('#' + elementID + '-container');
@@ -34,6 +38,8 @@ function showProgressbars()
         $(window).off('scroll', showProgressbars);
         $('#progress-bars').slideDown(500);
         setTimeout(() => animateProgressbars(), 500);
+        setTimeout(() => show2ndPic(), 500);
+        setTimeout(() => $(window).on('scroll', showExperience), 1500);
     }
 }
 
@@ -47,7 +53,21 @@ function animateProgressbars()
     $('#Hard-Work-Progress').animate({width: '100%'}, animationTime);
 }
 
+function show2ndPic()
+{
+    $(window).off('scroll', show2ndPic);
+    $('#2nd-Pic').fadeIn(500);
+}
+
+function showExperience()
+{
+    if (inWindowView('experience'))
+    {
+        $('#experience').slideDown(1000);
+    }
+}
 $(document).ready(function(){
+    setTimeout( () => $('#footer').fadeIn(500), 1500);
     if (window.innerWidth >= 992) /* for devices such as laptops and desktops */
     {
         $(window).on('scroll', showAboutMe);
