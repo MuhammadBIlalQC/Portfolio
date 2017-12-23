@@ -39,7 +39,7 @@ function showProgressbars()
         $('#progress-bars').slideDown(500);
         setTimeout(() => animateProgressbars(), 500);
         setTimeout(() => show2ndPic(), 500);
-        $(window).on('scroll', showExperience);
+        showExperience();
     }
 }
 
@@ -61,10 +61,7 @@ function show2ndPic()
 
 function showExperience()
 {
-    if (inWindowView('experience'))
-    {
-        $('#experience').slideDown(1000);
-    }
+    $('#cd-timeline').css('display', 'block');
 }
 $(document).ready(function(){
     setTimeout( () => $('#footer').fadeIn(500), 1500);
@@ -80,3 +77,4 @@ $(document).ready(function(){
     }
 });
 
+//#cd-timeline

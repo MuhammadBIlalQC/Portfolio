@@ -1,0 +1,58 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+.navbar {
+    background-color: rgba(0,0,0,0) !important;
+    z-index: 10;
+    border: none;
+}
+
+.navbar a {
+    font-size: 125%;
+}
+
+.navbar a:hover {
+    color: black !important;
+}
+
+.my-progress {
+    font-size: 22px;
+}
+
+.experience-li {
+    margin-top: 40px;
+}
+#home-banner {
+    min-width: 100%;
+    position: absolute;
+    top: -40px;
+}
+
+#about-me {
+    font-family: 'Poiret One', cursive;
+    font-size: 22px;
+}
+
+#experience-section p {
+    font-size: 24px;
+    padding-left: 10px;
+    line-height: 40px;
+}
+
+#footer {
+    background-color: black;
+    margin-top: 40px;
+}
+
+#footer a {
+    color: white;
+    font-size: 16px;
+}
+
+#footer a:hover {
+    background-color: gray;
+}
+
+#footer li {
+    float: right;
+}

@@ -9,65 +9,14 @@
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script src="scripts/ScrollAnimations.js"></script>
+    <link href="stylesheets/main_style.css" rel="stylesheet" />
+    <link href="stylesheets/timeline.css" rel="stylesheet" />
+    
+	<script src="scripts/timeline-modernizr.js"></script> <!-- Modernizr -->
+  	<script src="scripts/timeline-main.js"></script>
+    
     <style>
-        * {
-            font-family: 'Open Sans', sans-serif;
-        } 
-        .navbar {
-            background-color: rgba(0,0,0,0) !important;
-            z-index: 10;
-            border: none;
-        }
         
-        .navbar a {
-            font-size: 125%;
-        }
-        
-        .navbar a:hover {
-            color: black !important;
-        }
-        
-        .my-progress {
-            font-size: 22px;
-        }
-        
-        .experience-li {
-            margin-top: 40px;
-        }
-        #home-banner {
-            min-width: 100%;
-            position: absolute;
-            top: -40px;
-        }
-        
-        #about-me {
-            font-family: 'Poiret One', cursive;
-            font-size: 22px;
-        }
-        
-        #experience-section p {
-            font-size: 24px;
-            padding-left: 10px;
-            line-height: 40px;
-        }
-        
-        #footer {
-            background-color: black;
-            margin-top: 40px;
-        }
-        
-        #footer a {
-            color: white;
-            font-size: 16px;
-        }
-        
-        #footer a:hover {
-            background-color: gray;
-        }
-        
-        #footer li {
-            float: right;
-        }
     </style>
 </head>
 <body>
@@ -112,7 +61,7 @@
                 $('#filler').css('margin-top', height);
             }
             fixHeight();
-            
+
         });
     </script>
     <div id="filler"></div>
@@ -122,12 +71,12 @@
                 <div id="about-me" style="display: none">
                     <h1 style="width: 100%; text-align: center; padding-top: 20px;">
                         Hi, I am Muhammad!
-                    </h1> 
+                    </h1>
                     <br/>
                     <p>
                         My skills lay around the realm of mathematics and algorithms. I am currently in college pursing a bachelour’s in Computer Science in Queens College.
 
-                        I am an ambitious learner, always looking to expand my list of skills. When given the task of projects, I always put time and effort into making sure it is the best possible product. Ensuring all resources and skills are put to work, as well as learning new skills along the way, making the finished as close to perfect as possible. 
+                        I am an ambitious learner, always looking to expand my list of skills. When given the task of projects, I always put time and effort into making sure it is the best possible product. Ensuring all resources and skills are put to work, as well as learning new skills along the way, making the finished as close to perfect as possible.
                     </p>
                 </div>
             </div>
@@ -147,19 +96,19 @@
                 <div class="my-progress">
                     <p>Programming</p>
                     <div class="progress">
-                        <div id="Programming-Progress" class="progress-bar progress-bar-striped progress-bar-info" role="progressbar"  
+                        <div id="Programming-Progress" class="progress-bar progress-bar-striped progress-bar-info" role="progressbar"
                              style="width: 0%"></div>
                     </div>
                 </div>
                 <div class="my-progress">
                     <p>Algorithms</p>
                     <div class="progress">
-                        <div id="Algorithms-Progress" class="progress-bar progress-bar-striped progress-bar-success" role="progressbar" 
+                        <div id="Algorithms-Progress" class="progress-bar progress-bar-striped progress-bar-success" role="progressbar"
                              style="width: 0%"></div>
                     </div>
                 </div>
                 <div class="my-progress">
-                    <p>Web Technolgoies</p> 
+                    <p>Web Technolgoies</p>
                     <div class="progress">
                         <div id="Web-Progress" class="progress-bar progress-bar-striped progress-bar-warning" role="progressbar" style="width: 0%"></div>
                     </div>
@@ -176,6 +125,7 @@
                 <img id="2nd-Pic" style="display: none;" src="images/computer-2583383_960_720.jpg" style="max-width: 100%; max-height: 100%;" class="img-thumbnail" />
             </div>
         </div>
+        <!--
         <div class="row">
             <div class="col-xs-12 col-md-12" id="experience-container">
                 <div id="experience" style="display: none;">
@@ -210,9 +160,78 @@
                 </div>
             </div>
             </div>
-        </div>
+        </div> -->
     </div>
-    
+
+    <div id="cd-timeline-container">
+        
+    <section id="cd-timeline" class="cd-container" style="display: none;">
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h1>Bachelour's in Computer Science</h1>
+				<p></p>
+				<span class="cd-date">May, 2019</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h1>Food and Store Project</h1>
+				<p></p>
+				<span class="cd-date">December, 2017</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h1>Alzerina Jewelry</h1>
+				<h2>Front End Development Internship</h2>
+				<span class="cd-date">September, 2017</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-location">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h1>SocialHub Project</h1>
+				<p></p>
+				<span class="cd-date">Augest, 2017</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-location">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h1>First Day of College!</h1>
+				<span class="cd-date">Augest, 2015</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h1>Hello World!</h1>
+				<p></p>
+				<span class="cd-date">1997</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+	</section> <!-- cd-timeline -->
+    </div>
     <div class="container-fluid" style="width: 100%; padding: 0px;">
         <ul class="nav nav-pills" id="footer" style="display: none;">
             <li role="presentation">
