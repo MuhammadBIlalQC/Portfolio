@@ -1,0 +1,312 @@
+<html>
+    <head>
+        <title>
+            Muhammad Bilal
+        </title>
+        <script>
+            if (screen.width <= 991) {
+                document.location = "index2.html";
+            }
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Calligraffitti" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+        <style>
+        .typewriter {
+          color: #fff;
+          font-family: monospace;
+          overflow: hidden;
+          white-space: nowrap; 
+          margin: 0 auto; 
+          letter-spacing: .15em; 
+          animation: 
+            typing 1.5s steps(30, end);
+        }
+        
+        /* The typing effect */
+        @keyframes typing {
+          from { width: 0 }
+          to { width: 100% }
+        }
+        
+        }
+        
+        </style>
+        <style>
+            #front-banner {
+                background-color: #0197F6;
+            }
+            #welcome-text {
+                padding-top: 100px;
+                padding-bottom: 100px;
+                text-align: center;
+                font-family: 'Coming Soon', cursive;
+                font-size: 60px;
+                
+            }
+            #boy-studying, #teacher {
+                max-height: 250px;
+            }
+            #about-me {
+                font-family: 'Poiret One', cursive;
+                font-size: 22px;
+            }
+            .navbar {
+                z-index: 10;
+                border: none;
+                background-color: #0197F6;
+                margin-bottom: 0px;
+                border-radius: 0px;
+            }
+            
+            .nav-text {
+                color: white !important;
+            }
+            
+            #boy-studying, #teacher, #student-text, .bouncy-text{
+              opacity: 0;
+              animation-name: bounceIn;
+              animation-duration: 450ms;
+              animation-timing-function: linear;
+              animation-fill-mode: forwards;
+            }
+            
+            
+            #boy-studying, #teacher, #student-text {animation-delay: 1.5s;}
+            
+            @keyframes bounceIn{
+              0%{
+                opacity: 0;
+                transform: scale(0.3) translate3d(0,0,0);
+              }
+              50%{
+                opacity: 0.9;
+                transform: scale(1.1);
+              }
+              80%{
+                opacity: 1;
+                transform: scale(0.89);
+              }
+              100%{
+                opacity: 1;
+                transform: scale(1) translate3d(0,0,0);
+              }
+        </style>
+    </head>
+    <body>
+         <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand nav-text" href="#">Muhammad Bilal</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="nav-text" href="http://muhammad-bilal.com/Resume/Resume.pdf" target="_blank">Resume</a>
+                    </li>
+                    <li>
+                        <a class="nav-text" href="https://github.com/MuhammadBIlalQC/" target="_blank">Github</a>
+                    </li>
+                    <li>
+                        <a class="nav-text" href="https://www.linkedin.com/in/muhammad-bilal-2017/" target="_blank">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a class="nav-text" href="#" target="_blank">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <div class="container" style="width: 100%;">
+            <div class="row">
+                <div class="col-md-12" id="front-banner">
+                    <h1 id="welcome-text" class="typewriter">Hi, My Name is Muhammad!</h1>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 40px;">
+                <div class="col-md-offset-1 col-md-3">
+                    <img id="boy-studying" src="boy-studying.png" />
+                </div>
+                <div class="col-md-offset-1 col-md-3">
+                    <h3 style="font-size: 40px; font-family: 'Calligraffitti', cursive;, sans-serif; line-height:60px;" id="student-text">
+                        Student. <br />
+                        Programmer. <br />
+                        Hobbyist. <br />
+                    </h3>
+                </div>
+                <div class="col-md-offset-1 col-md-3">
+                    <img id="teacher" src="teacher.png" />
+                </div>
+            </div>
+            <div class="row" style="margin-top: 40px;">
+            <div class="col-sm-12 col-md-offset-1 col-md-5" id="about-me-container">
+                <div id="about-me" style="display: none">
+                    <h1 style="width: 100%; text-align: center; padding-top: 20px;">
+                        Hi, I am Muhammad!
+                    </h1>
+                    <br/>
+                    <p>
+                        I am currently pursing a degree in Computer Science. My interests lay around the realm of security, data, design, mathematics and algorithms.
+                        I am an ambitious learner, always looking to expand my list of skills. When given the task of projects, I always put time and effort into making sure it is the best possible product.
+						Ensuring all resources and skills are put to work, as well as learning new skills along the way, making the finished product as close to perfect as possible.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6" id="cat-container">
+                    <img src="http://muhammad-bilal.com/images/cat.svg" id="cat"  class="img-fluid rounded"  style="display: none; max-width: 60%;"> <!-- style="display: none" for animations -->
+            </div>
+            <div class="row">
+            <div class="col-md-offset-3 col-md-6" style="margin-bottom: 40px;" id="progress-bars-container">
+                <div id="progress-bars" style="display: none;">
+                <div class="my-progress">
+                    <p>Problem Solving</p>
+                    <div class="progress">
+                        <div id="Problem-Solving-Progress" class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="my-progress">
+                    <p>Programming</p>
+                    <div class="progress">
+                        <div id="Programming-Progress" class="progress-bar progress-bar-striped progress-bar-info" role="progressbar"
+                             style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="my-progress">
+                    <p>Algorithms</p>
+                    <div class="progress">
+                        <div id="Algorithms-Progress" class="progress-bar progress-bar-striped progress-bar-success" role="progressbar"
+                             style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="my-progress">
+                    <p>Web Technolgoies</p>
+                    <div class="progress">
+                        <div id="Web-Progress" class="progress-bar progress-bar-striped progress-bar-warning" role="progressbar" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="my-progress">
+                    <p>Hard Work</p>
+                    <div class="progress">
+                        <div id="Hard-Work-Progress" class="progress-bar progress-bar-striped progress-bar-danger" role="progressbar" style="width: 0%"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6" id="2nd-Pic-container">
+                <img id="2nd-Pic" style="display: none;" src="images/computer-2583383_960_720.jpg" style="max-width: 100%; max-height: 100%;" class="img-thumbnail" />
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-xs-12 col-md-offset-2 col-md-8" id="experience-container">
+                <div id="experience" style="display: none;">
+                <h1 style="width: 100%;text-align: center;">Experience</h1>
+                <div class="experience-li">
+                    <h2 class="text-primary">Alzerina Jewelry <span class="text-muted">[Front End Engineer]</span></h2>
+                    <p>
+                        Using HTML, CSS, Bootstrap, JavaScript and jQuery, updated
+                        websites. <br />
+                        Increased traffic using Search Engine Optimization by adding
+                        relevant keywords into each page appropriately, added alt attributes
+                        to images, and updated each pages title and meta description for
+                        user friendly search results.
+                    </p>
+                </div>
+                <div class="experience-li">
+                    <h2 class="text-primary">Social Hub <span class="text-muted">[Personal Full Stack Project]</span></h2>
+                    <p>
+                        Created a basic social media website using HTML, CSS, Bootstrap,
+                        React.js, Node.js and Express.js <br />
+                        Able to send friend requests. <br />
+                        Fully functional messaging system implemented along with social
+                        media posting.
+                    </p>
+                </div>
+				<div class="experience-li">
+                    <h2 class="text-primary">Food and Store <span class="text-muted">[Personal Full Stack Project]</span></h2>
+                    <p>
+                        Basic Website created using HTML, CSS, JavaScript, jQuery, Node.js and Express.js <br />
+						<a href="https://stormy-spire-47740.herokuapp.com/" target="_blank" >Link can be found here</a>
+                    </p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+        </div>
+        
+            <div class="container-fluid" style="width: 100%; padding: 0px; background-color: #0197F6; color: white;">
+                <ul class="nav nav-pills" id="footer" style="display: none;">
+                    <li role="presentation">
+                        <a style="color: white;" href="https://github.com/MuhammadBIlalQC/" target="_blank">GitHub</a>
+                    </li>
+                    <li role="presentation">
+                        <a style="color: white;" href="https://www.linkedin.com/in/muhammad-bilal-2017/" target="_blank">LinkedIn</a>
+                    </li>
+                    <li role="presentation">
+                        <a style="color: white;" href="#">Contact</a>
+                    </li>
+                    <li role="presentation">
+                        <a style="color: white;" href="http://muhammad-bilal.com/Resume/Resume.pdf" target="_blank">Resume</a>
+                    </li>
+                </ul>
+        </div>
+        
+        
+        <script>
+            function showAboutMe()
+            {
+                $('#about-me').slideDown(1500);
+            }
+            
+            function showCat()
+            {
+                $('#cat').fadeIn(1500);
+            }
+            function showProgress()
+            {
+                    $('#progress-bars').slideDown(500);
+                    setTimeout(() => animateProgressbars(), 500);
+                    setTimeout(() => show2ndPic(), 500);
+                    showExperience();
+            }
+            
+            function animateProgressbars()
+            {
+                const animationTime = 1500;
+                $('#Problem-Solving-Progress').animate({width: '80%'}, animationTime);
+                $('#Programming-Progress').animate({width: '90%'}, animationTime);
+                $('#Algorithms-Progress').animate({width: '60%'}, animationTime);
+                $('#Web-Progress').animate({width: '75%'}, animationTime);
+                $('#Hard-Work-Progress').animate({width: '100%'}, animationTime);
+            }
+            
+            function showExperience()
+            {
+                $('#experience').fadeIn(1500);
+                 $('#footer').fadeIn(500);
+            }
+            setTimeout(function(){
+                showAboutMe();
+                showCat();
+                showProgress();
+            }, 1500);
+
+        </script>
+    </body>
+</html>
